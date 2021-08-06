@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Displaying user name and password</title>
+        <script>
+        function login(){
+            let user = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            alert("username is:"+ user);
+            alert("password is:"+ password);
+        }
+        </script>
+    </head>
+    <body>
+        user name:<input id="username"><br>
+        password :<input id="password"><br><br>
+        <button type="submit" onclick="login()">submit</button>
+    </body>
+</html>
