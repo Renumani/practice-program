@@ -6,14 +6,17 @@
         function login(){
             let user = document.getElementById("username").value;
             let password = document.getElementById("password").value;
-            alert("username is:"+ user);
-            alert("password is:"+ password);
+            document.write("username is:"+ user);
+            document.write("<br><br>");
+            document.write("password is:"+ password);
         }
         </script>
     </head>
     <body>
-        user name:<input id="username"><br>
-        password :<input id="password"><br><br>
-        <button type="submit" onclick="login()">submit</button>
+        <form method="post">
+        user name:<input id="username"><br>;
+        password :<input id="password"><br><br>;
+        <button type="submit" onclick="login()">submit</button>;
+        </form>
     </body>
 </html>
