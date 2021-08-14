@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register form</title>
+        <script>
+        function login(){
+            let fname = document.getElementById("finame").value;
+            let lname = document.getElementById("laname").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let org = document.getElementById("organ").value;
+            alert ("User info")
+            alert("First name:"+ fname);
+            alert("Last name:"+ lname);
+            alert("Email:"+email);
+            alert("password :"+ password);
+            alert("Users  organization:"+org);
+        }
+        </script>
+    </head>
+    <body>
+        <form method ="post">
+            <fieldset>
+                <legend>Personal info of User</legend>
+                 First name:<input type = "text" id="finame"placeholder="Firstname" required><br><br>
+                Last name:<input type = "text" id="laname" placeholder="Lastname"required><br><br>
+                Email:<input type = "email" id="email" placeholder="abc@gmail.com"required><br><br>
+                Password :<input type ="password" id="password" placeholder="cdf.123"required><br><br>
+                <label for="organizations">Choose your organization</label>
+                <select name ="organization" id="organ">
+                    <optgroup label="IT Organization">
+                        <option value="tcs">TCS</option>
+                        <option value="cognizant">Cognizant</option>
+                        <option value="hcl">HCL</option>
+                        <option value="wipro">Wipro</option>
+                        <option value="Thoughtworks">Thoughtworks</option>
+                        <option value="others">Others</option>
+                    </optgroup>
+                </select>
+                <input type="submit" onclick="login()" /> 
+            </fieldset>
+        </form>
+    </body>
+</html>                                                                                                                                                                                                                                                                                                                         
