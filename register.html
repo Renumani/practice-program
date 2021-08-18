@@ -10,32 +10,53 @@
             let email = document.getElementById("email").value;
             let password = document.getElementById("password").value;
             let org = document.getElementById("organ").value;
-            alert ("User info")
-            alert("First name:"+ fname);
-            alert("Last name:"+ lname);
-            alert("Email:"+email);
-            alert("password :"+ password);
-            alert("Users  organization:"+org);
+               if(fname==""){
+                alert("Fill the firstname");
+                return false;
+            }
+            else if(lname==""){
+                alert("Fill the lastname");
+                return false;
+            }
+            else if(email==""){
+                alert("Fill the email");
+                return false;
+            }
+            else if(password==""){
+                alert("Fill the password");
+                return false;
+            }
+            else if(org==""){
+                alert("Fill the organization");
+                return false;
+            }
+            alert ("Successfully registered ");
+            document.write("First name:"+ fname);
+            document.write ("Last name:"+ lname);
+            document.write ("Email:"+email);
+            document.write ("password :"+ password);
+            document.write ("Users  organization:"+org);
         }
         </script>
     </head>
     <body>
-        <form method ="post">
+        <form onsubmit = return login() method ="post">
             <fieldset>
                 <legend>Personal info of User</legend>
-                 First name:<input type = "text" id="finame"placeholder="Firstname" required><br><br>
-                Last name:<input type = "text" id="laname" placeholder="Lastname"required><br><br>
-                Email:<input type = "email" id="email" placeholder="abc@gmail.com"required><br><br>
-                Password :<input type ="password" id="password" placeholder="cdf.123"required><br><br>
+                 First name:<input type = "text" id="finame"placeholder="Firstname" ><br><br>
+                Last name:<input type = "text" id="laname" placeholder="Lastname"><br><br>
+                Email:<input type = "email" id="email" placeholder="abc@gmail.com"><br><br>
+                Password :<input type ="password" id="password" placeholder="cdf.123"><br><br>
                 <label for="organizations">Choose your organization</label>
                 <select name ="organization" id="organ">
                     <optgroup label="IT Organization">
-                        <option value="tcs">TCS</option>
-                        <option value="cognizant">Cognizant</option>
-                        <option value="hcl">HCL</option>
-                        <option value="wipro">Wipro</option>
+                        <option value="choose">**Choose your organization**</option>
+                        <option value="Tcs">TCS</option>
+                        <option value="Cognizant">Cognizant</option>
+                        <option value="Hcl">HCL</option>
+                        <option value="Wipro">Wipro</option>
                         <option value="Thoughtworks">Thoughtworks</option>
-                        <option value="others">Others</option>
+                        <option value="Others">Others</option>
                     </optgroup>
                 </select>
                 <input type="submit" onclick="login()" /> 
