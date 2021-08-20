@@ -14,3 +14,8 @@ let add = (z)=>{
     document.write(y);
 }  
 console.log(add(5));
+	
+//Ternary operator
+let t = parseInt(prompt("enter the value to bechecked"));
+let div = t % 3==0?  'Divisibleby3':'Not divisibleby3';
+console.log(div);
